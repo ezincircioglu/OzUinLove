@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-Ib-GyR">
-                                <rect key="frame" x="147" y="78" width="307" height="244"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="244" id="aqe-Ui-LLV"/>
-                                    <constraint firstAttribute="width" constant="307" id="wxC-hy-LCC"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDg-ZW-o15">
                                 <rect key="frame" x="424" y="378" width="30" height="30"/>
                                 <constraints>
@@ -68,6 +61,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-Ib-GyR">
+                                <rect key="frame" x="147" y="78" width="307" height="244"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="aqe-Ui-LLV"/>
+                                    <constraint firstAttribute="width" constant="307" id="wxC-hy-LCC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,7 +137,7 @@
                                     <constraint firstAttribute="height" constant="21" id="ZW7-cn-dBP"/>
                                     <constraint firstAttribute="width" constant="60" id="ijR-SI-hUG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

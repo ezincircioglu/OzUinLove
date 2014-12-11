@@ -14,10 +14,10 @@ class TrainingSet: Community {
     
     override init() {
         super.init()
-        self.populateCS()
+        self.populate()
     }
     
-    private func populateCS() {
+    private func populate() {
         
 
         dept.addMember(Member(name: "Reha", lastName: "Civanlar", userName:"rehac" , age: 50))
@@ -27,7 +27,9 @@ class TrainingSet: Community {
         dept.addMember(Member(name: "Hasan", lastName:"Sozer", userName:"hasans", age: 50))
         dept.addMember(Member(name: "Erhan", lastName:"Oztop", userName:"erhano", age: 50))
         dept.addMember(Member(name: "Murat", lastName:"Sensoy", userName:"muratsen", age: 50))
-        
+        dept.addMember(Member(name: "Meltem", lastName:"Denizel", userName: "meltemd", age:50))
+        dept.addMember(Member(name: "Ekrem", lastName:"Duman", userName: "ekremd", age:50))
+        dept.addMember(Member(name: "Orsan", lastName:"Ozener", userName: "okano", age:50))
     }
     
 }

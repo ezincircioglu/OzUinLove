@@ -12,9 +12,6 @@ class infoViewController: UIViewController {
     
     var member: Member!
     
-    
-    
-    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
