@@ -11,13 +11,13 @@ import Foundation
 class Community {
     
     var members = [Member]()
-    let fullName: String
-    let shortName: String
-    
-    init(fullName: String, shortName: String) {
-        self.fullName = fullName
-        self.shortName = shortName
-    }
+//    let fullName: String
+//
+//    
+//    init(fullName: String) {
+//        self.fullName = fullName
+//        
+//    }
     
     func addMember(member: Member) {
         members.append(member)

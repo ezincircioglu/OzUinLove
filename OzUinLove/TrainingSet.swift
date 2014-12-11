@@ -10,13 +10,18 @@ import Foundation
 
 class TrainingSet: Community {
     
-    override init(fullName: String, shortName: String) {
-        super.init(fullName: String(), shortName: String())
-        populateCS()
+    let dept = Community()
+    
+    override init() {
+        super.init()
+        self.populateCS()
     }
     
+    
+    
     private func populateCS() {
-        let dept = Community(fullName: "Computer Science", shortName: "CS")
+        
+
         dept.addMember(Member(name: "Reha", lastName: "Civanlar", userName:"rehac" , age: 50))
         dept.addMember(Member(name: "Tanju", lastName:"Erdem", userName:"tanjue", age: 50))
         dept.addMember(Member(name: "Ismail", lastName:"Ari", userName:"ismaila", age: 50))
