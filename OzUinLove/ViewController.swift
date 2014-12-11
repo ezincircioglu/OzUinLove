@@ -11,20 +11,30 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    var member: Member!
+
     var train = TrainingSet()
+    var index: Int = 0
     
+    @IBAction func Like() {
+        index++
+        refreshUI()
+    }
     
+    @IBAction func Nope() {
+        index++
+        refreshUI()
+    }
     
+    func refreshUI() {
+        viewDidLoad()
+    }
     
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
-      //  label.text? = train.dept.members[1].name
-        let url = "http://www.hack4fun.org/h4f/sites/default/files/bindump/lena.bmp"
+      
+        let url = "http://annualreport.ozyegin.edu.tr/images/profile/" + train.dept.members[index].userName + ".jpg"
         if let nsurl = NSURL(string: url) {
             if let nsdata = NSData(contentsOfURL: nsurl) {
                 imageView.image = UIImage(data: nsdata)
@@ -40,7 +50,7 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        let member = train.dept.members[1]
+        let member = train.dept.members[index]
         let memberVC = segue.destinationViewController as infoViewController
         memberVC.member = member
     }

@@ -17,8 +17,6 @@ class TrainingSet: Community {
         self.populateCS()
     }
     
-    
-    
     private func populateCS() {
         
 

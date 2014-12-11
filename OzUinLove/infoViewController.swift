@@ -28,8 +28,9 @@ class infoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      nameLabel.text = member.name
-        let url = "http://www.hack4fun.org/h4f/sites/default/files/bindump/lena.bmp"
+      nameLabel.text = member.name + " " + member.lastName
+        ageLabel.text = member.age.description
+        let url = "http://annualreport.ozyegin.edu.tr/images/profile/" + member.userName + ".jpg"
         if let nsurl = NSURL(string: url) {
             if let nsdata = NSData(contentsOfURL: nsurl) {
                 imageView.image = UIImage(data: nsdata)
