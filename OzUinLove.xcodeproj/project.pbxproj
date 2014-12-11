@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F050BA491A39039E0035B419 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050BA481A39039E0035B419 /* infoViewController.swift */; };
+		F050BA5C1A39090E0035B419 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050BA5B1A39090E0035B419 /* Member.swift */; };
+		F050BA5E1A3909C10035B419 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050BA5D1A3909C10035B419 /* Community.swift */; };
+		F050BA601A390ACB0035B419 /* TrainingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050BA5F1A390ACB0035B419 /* TrainingSet.swift */; };
 		F0E29BD91A38AE0500FF5BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E29BD81A38AE0500FF5BF6 /* AppDelegate.swift */; };
 		F0E29BDB1A38AE0500FF5BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E29BDA1A38AE0500FF5BF6 /* ViewController.swift */; };
 		F0E29BDE1A38AE0500FF5BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E29BDC1A38AE0500FF5BF6 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F050BA481A39039E0035B419 /* infoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
+		F050BA5B1A39090E0035B419 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F050BA5D1A3909C10035B419 /* Community.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
+		F050BA5F1A390ACB0035B419 /* TrainingSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingSet.swift; sourceTree = "<group>"; };
 		F0E29BD31A38AE0500FF5BF6 /* OzUinLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OzUinLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E29BD71A38AE0500FF5BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E29BD81A38AE0500FF5BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,10 +87,14 @@
 			children = (
 				F0E29BD81A38AE0500FF5BF6 /* AppDelegate.swift */,
 				F0E29BDA1A38AE0500FF5BF6 /* ViewController.swift */,
+				F050BA481A39039E0035B419 /* infoViewController.swift */,
 				F0E29BDC1A38AE0500FF5BF6 /* Main.storyboard */,
 				F0E29BDF1A38AE0500FF5BF6 /* Images.xcassets */,
 				F0E29BE11A38AE0500FF5BF6 /* LaunchScreen.xib */,
 				F0E29BD61A38AE0500FF5BF6 /* Supporting Files */,
+				F050BA5B1A39090E0035B419 /* Member.swift */,
+				F050BA5D1A3909C10035B419 /* Community.swift */,
+				F050BA5F1A390ACB0035B419 /* TrainingSet.swift */,
 			);
 			path = OzUinLove;
 			sourceTree = "<group>";
@@ -161,6 +173,7 @@
 				TargetAttributes = {
 					F0E29BD21A38AE0500FF5BF6 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 26A7HBULG3;
 					};
 					F0E29BE71A38AE0500FF5BF6 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -212,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F050BA601A390ACB0035B419 /* TrainingSet.swift in Sources */,
+				F050BA5E1A3909C10035B419 /* Community.swift in Sources */,
+				F050BA491A39039E0035B419 /* infoViewController.swift in Sources */,
 				F0E29BDB1A38AE0500FF5BF6 /* ViewController.swift in Sources */,
 				F0E29BD91A38AE0500FF5BF6 /* AppDelegate.swift in Sources */,
+				F050BA5C1A39090E0035B419 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = OzUinLove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = OzUinLove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +424,7 @@
 				F0E29BF41A38AE0500FF5BF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0E29BF51A38AE0500FF5BF6 /* Build configuration list for PBXNativeTarget "OzUinLoveTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +433,7 @@
 				F0E29BF71A38AE0500FF5BF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
