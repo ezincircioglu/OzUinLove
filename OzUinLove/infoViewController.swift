@@ -28,7 +28,7 @@ class infoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+      nameLabel.text = member.name
         let url = "http://www.hack4fun.org/h4f/sites/default/files/bindump/lena.bmp"
         if let nsurl = NSURL(string: url) {
             if let nsdata = NSData(contentsOfURL: nsurl) {

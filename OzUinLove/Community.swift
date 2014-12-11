@@ -11,13 +11,7 @@ import Foundation
 class Community {
     
     var members = [Member]()
-//    let fullName: String
-//
-//    
-//    init(fullName: String) {
-//        self.fullName = fullName
-//        
-//    }
+
     
     func addMember(member: Member) {
         members.append(member)
