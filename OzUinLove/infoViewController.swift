@@ -27,7 +27,7 @@ class infoViewController: UIViewController {
         super.viewDidLoad()
       nameLabel.text = member.name + " " + member.lastName
         ageLabel.text = member.age.description
-        let url = "http://annualreport.ozyegin.edu.tr/images/profile/" + member.userName + ".jpg"
+        let url = member.photoURL
         if let nsurl = NSURL(string: url) {
             if let nsdata = NSData(contentsOfURL: nsurl) {
                 imageView.image = UIImage(data: nsdata)

@@ -4,6 +4,69 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Login Screen-->
+        <scene sceneID="BE7-d8-9Np">
+            <objects>
+                <viewController storyboardIdentifier="login" title="Login Screen" id="hep-DG-abI" customClass="loginViewController" customModule="OzUinLove" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JNM-cU-XeT"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Me-p8-X3h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="snY-vL-fke">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tyb-Y0-YWc">
+                                <rect key="frame" x="198" y="187" width="204" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uao-RP-LnY">
+                                <rect key="frame" x="198" y="263" width="204" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38y-gL-3PM">
+                                <rect key="frame" x="270" y="382" width="57" height="30"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zbA-hh-QC7" kind="show" id="08B-zU-zig"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Jo-FYU">
+                                <rect key="frame" x="277" y="318" width="43" height="30"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0n-Qd-w3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="-1278"/>
+        </scene>
+        <!--Register Screen-->
+        <scene sceneID="uD0-dt-Px6">
+            <objects>
+                <viewController storyboardIdentifier="register" title="Register Screen" id="zbA-hh-QC7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yK2-0j-DS3"/>
+                        <viewControllerLayoutGuide type="bottom" id="sHA-h8-BlC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gZU-qg-QGs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRm-j6-Eht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="-1278"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -94,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="667" y="-648"/>
+            <point key="canvasLocation" x="823" y="-500"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pet-Uf-T4z">
@@ -110,7 +173,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abM-eD-mlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="-840"/>
+            <point key="canvasLocation" x="-508" y="-593"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="1ic-wU-0AI">
@@ -194,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Y3-KI-MkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432" y="-557"/>
+            <point key="canvasLocation" x="1724" y="-593"/>
         </scene>
     </scenes>
 </document>

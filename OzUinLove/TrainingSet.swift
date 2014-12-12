@@ -10,7 +10,7 @@ import Foundation
 
 class TrainingSet: Account {
     
-    let dept = Account()
+    let acc = Account()
     
     override init() {
         super.init()
@@ -19,17 +19,10 @@ class TrainingSet: Account {
     
     private func populate() {
         
+        acc.addMember(Member(name: "Miranda", lastName: "Kerr", photoURL: "http://www.celebmarriages.com/wp-content/uploads/2014/10/Miranda-Kerr-CelebMarriages_com.jpg", age: 30))
+        
+        acc.addMember(Member(name: "Candice", lastName: "Swaneopel", photoURL: "http://cdn.internethaber.com/gallery/37591/4.jpg", age: 26))
 
-        dept.addMember(Member(name: "Reha", lastName: "Civanlar", userName:"rehac" , age: 50))
-        dept.addMember(Member(name: "Tanju", lastName:"Erdem", userName:"tanjue", age: 50))
-        dept.addMember(Member(name: "Ismail", lastName:"Ari", userName:"ismaila", age: 50))
-        dept.addMember(Member(name: "Baris", lastName:"Aktemur", userName:"barisa", age: 50))
-        dept.addMember(Member(name: "Hasan", lastName:"Sozer", userName:"hasans", age: 50))
-        dept.addMember(Member(name: "Erhan", lastName:"Oztop", userName:"erhano", age: 50))
-        dept.addMember(Member(name: "Murat", lastName:"Sensoy", userName:"muratsen", age: 50))
-        dept.addMember(Member(name: "Meltem", lastName:"Denizel", userName: "meltemd", age:50))
-        dept.addMember(Member(name: "Ekrem", lastName:"Duman", userName: "ekremd", age:50))
-        dept.addMember(Member(name: "Orsan", lastName:"Ozener", userName: "okano", age:50))
     }
     
 }

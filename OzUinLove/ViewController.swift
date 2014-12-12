@@ -18,13 +18,13 @@ class ViewController: UIViewController {
     var index: Int = 0
     
     @IBAction func Like() {
-        memberArrayIndex(train.dept.members)
+        memberArrayIndex(train.acc.members)
         refreshUI()
         
     }
 
     @IBAction func Nope() {
-        memberArrayIndex(train.dept.members)
+        memberArrayIndex(train.acc.members)
         refreshUI()
     }
     
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
   
-        let url = "http://annualreport.ozyegin.edu.tr/images/profile/" + train.dept.members[index].userName + ".jpg"
+        let url = train.acc.members[index].photoURL
         if let nsurl = NSURL(string: url) {
             if let nsdata = NSData(contentsOfURL: nsurl) {
                 imageView.image = UIImage(data: nsdata)
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        let member = train.dept.members[index]
+        let member = train.acc.members[index]
         let memberVC = segue.destinationViewController as infoViewController
         memberVC.member = member
     

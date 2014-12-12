@@ -12,13 +12,13 @@ import Foundation
 class Member {
     let name: String
     let lastName: String
-    let userName: String
+    let photoURL: String
     let age: Int
     
-    init(name: String, lastName: String, userName: String, age: Int) {
+    init(name: String, lastName: String, photoURL: String, age: Int) {
         self.name = name
         self.lastName = lastName
-        self.userName = userName
+        self.photoURL = photoURL
         self.age = age
         
     }
