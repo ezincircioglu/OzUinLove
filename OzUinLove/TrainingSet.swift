@@ -8,9 +8,9 @@
 
 import Foundation
 
-class TrainingSet: Community {
+class TrainingSet: Account {
     
-    let dept = Community()
+    let dept = Account()
     
     override init() {
         super.init()

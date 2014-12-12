@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Community {
+class Account {
     
     var members = [Member]()
 
