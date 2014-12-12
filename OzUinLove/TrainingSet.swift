@@ -17,6 +17,9 @@ class TrainingSet: Account {
         self.populate()
     }
     
+    
+    // bu fonksiyon yakında gider.
+    
     private func populate() {
         
         acc.addMember(Member(name: "Miranda", lastName: "Kerr", photoURL: "http://www.celebmarriages.com/wp-content/uploads/2014/10/Miranda-Kerr-CelebMarriages_com.jpg", age: 30))
