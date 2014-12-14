@@ -11,9 +11,7 @@ import UIKit
 class loginViewController: UIViewController {
    
     
-    @IBAction func checkField(sender: UITextField) {
-        check()
-    }
+
     
     @IBOutlet weak var logIn: UIButton!
     
@@ -21,15 +19,27 @@ class loginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
-    func check() {
-        if(nameField.text != "" && passwordField.text != "") {
-            logIn.enabled = true
-        } else {
-            logIn.enabled = false
-        }
-    }
     
     @IBAction func logInButtonTapped() {
+        var username:NSString = nameField.text
+        var password:NSString = passwordField.text
+        
+        if ( username.isEqualToString("") || password.isEqualToString("") ) {
+            
+            var alertView:UIAlertView = UIAlertView()
+            alertView.title = "Sign in Failed!"
+            alertView.message = "Please enter Username and Password"
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+        } else {
+            
+            var post:NSString = "username=\(username)&password=\(password)"
+            
+            NSLog("PostData: %@",post);
+            
+           
+                   }
     }
     
     @IBAction func registerButtonTapped() {

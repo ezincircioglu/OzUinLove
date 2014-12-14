@@ -10,12 +10,17 @@ import Foundation
 
 
 class Member {
+    let userName: String
+    let password: String
     let name: String
     let lastName: String
     let photoURL: String
     let age: Int
+
     
-    init(name: String, lastName: String, photoURL: String, age: Int) {
+    init(userName: String, password: String, name: String, lastName: String, photoURL: String, age: Int) {
+        self.userName = userName
+        self.password = password
         self.name = name
         self.lastName = lastName
         self.photoURL = photoURL

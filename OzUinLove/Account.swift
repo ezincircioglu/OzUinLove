@@ -10,11 +10,7 @@ import Foundation
 
 class Account {
     
-    var userName: String = ""
-    var password: String = ""
-    
-    //initiliazer eklenicek buralara hep.
-    
+
     var members = [Member]()
 
     
