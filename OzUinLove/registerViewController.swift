@@ -12,7 +12,8 @@ class registerViewController: UIViewController {
     
     
     var acc = Account()
-    var members: [Member] = []
+    
+    //var members: [Member] = []
     @IBOutlet weak var firstNameField: UITextField!
     
     @IBOutlet weak var lastNameField: UITextField!
@@ -25,6 +26,15 @@ class registerViewController: UIViewController {
     
     @IBOutlet weak var ageField: UITextField!
     
+    
+    @IBAction func deneme() {
+    
+        NSLog(acc.members[0].name)
+        NSLog(acc.members[0].lastName)
+        
+    }
+    
+    
     @IBAction func signUpTapped(sender: UIButton) {
         
 //        var username:NSString = userNameField.text as NSString
@@ -35,27 +45,35 @@ class registerViewController: UIViewController {
 //        var age.description:NSString = ageField.text as NSString
      
        // if ( username.isEqualToString("") || password.isEqualToString("") ) {
-        if(userNameField.text.isEmpty || passwordField.text.isEmpty) {
+        if(userNameField.text.isEmpty || passwordField.text.isEmpty || urlField.text.isEmpty || firstNameField.text.isEmpty
+            || lastNameField.text.isEmpty || ageField.text.isEmpty) {
             var alertView:UIAlertView = UIAlertView()
             alertView.title = "Sign Up Failed!"
-            alertView.message = "Please enter Username and Password"
+            alertView.message = "Please enter Username,Password,First Name,Last Name, photoURL and Age"
             alertView.delegate = self
             alertView.addButtonWithTitle("OK")
             alertView.show()
             }  else {
             
-            //acc.addMember(Member(userName: userNameField.text, password: passwordField.text, name: firstNameField.text, lastName: lastNameField.text, photoURL: urlField.text, age: ageField.text.toInt()!))
+            acc.addMember(Member(userName: userNameField.text, password: passwordField.text, name: firstNameField.text, lastName: lastNameField.text, photoURL: urlField.text, age: ageField.text.toInt()!))
             
-            members.append(Member(userName: userNameField.text, password: passwordField.text, name: firstNameField.text, lastName: lastNameField.text, photoURL: urlField.text, age: ageField.text.toInt()!))
+           // members.append(Member(userName: userNameField.text, password: passwordField.text, name: firstNameField.text, lastName: lastNameField.text, photoURL: urlField.text, age: ageField.text.toInt()!))
             
               //  items.append(textField.text)
-                let userDefaults = NSUserDefaults.standardUserDefaults()
-                userDefaults.setObject(members, forKey: "accounts")
+                //let userDefaults = NSUserDefaults.standardUserDefaults()
+                //userDefaults.setObject(members, forKey: "accounts")
+ 
+            
+            var alertView:UIAlertView = UIAlertView()
+            alertView.title = "Done"
+            alertView.message = "Registration Successful!"
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
             
             
-                       NSLog(userNameField.text)
-            
-            
+            //self.performSegueWithIdentifier("login", sender: self)
+            //self.dismissViewControllerAnimated(true, completion: nil)
             //var post:NSString = "username=\(username)&password=\(password)&photoURL=\(photoURL)"
  
             //NSLog("PostData: %@",post);
@@ -74,10 +92,19 @@ class registerViewController: UIViewController {
     }
     
     @IBAction func cancelTapped(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        navigationController?.popViewControllerAnimated(true)
+        
     }
     
-    
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let members = acc.members
+            let member = acc.members[0]
+            let membersVC = segue.destinationViewController as loginViewController
+            let memberVC = segue.destinationViewController as loginViewController
+            memberVC.member = member
+            membersVC.members = members
+        
+        }
     
     
     

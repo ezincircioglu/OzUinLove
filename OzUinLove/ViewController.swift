@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
 
     @IBAction func logoutTapped(sender: UIButton) {
+        
+        
+        
     }
     
     var acc = Account()
@@ -53,50 +56,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        if let defaultItems = userDefaults.arrayForKey("accounts") {
-            acc.members = defaultItems as [Member]
-        } else {
-            acc.members = [Member]()
-            userDefaults.setObject(acc.members, forKey: "accounts")
-        }
-        
-        
-        
             if(!acc.members.isEmpty) {
-            let url = acc.members[index].photoURL
-            if let nsurl = NSURL(string: url) {
-                if let nsdata = NSData(contentsOfURL: nsurl) {
-                    imageView.image = UIImage(data: nsdata)
+                let url = acc.members[index].photoURL
+                if let nsurl = NSURL(string: url) {
+                    if let nsdata = NSData(contentsOfURL: nsurl) {
+                        imageView.image = UIImage(data: nsdata)
                 
+                    }
                 }
             }
-        }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
-        
-        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
-        if (isLoggedIn != 1) {
-            self.performSegueWithIdentifier("login", sender: self)
-        } else {
-            self.usernameLabel.text = prefs.valueForKey("USERNAME") as NSString
-        }
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//
-//        let member = train.acc.members[index]
-//        let memberVC = segue.destinationViewController as infoViewController
-//        memberVC.member = member
-//    
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        let member = acc.members[index]
+        let memberVC = segue.destinationViewController as infoViewController
+        memberVC.member = member
+    
+    }
 }
 

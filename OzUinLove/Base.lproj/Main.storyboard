@@ -34,20 +34,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38y-gL-3PM">
-                                <rect key="frame" x="270" y="382" width="57" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="Tka-aH-avQ"/>
-                                    <constraint firstAttribute="height" constant="30" id="n8V-td-bsm"/>
-                                </constraints>
-                                <state key="normal" title="Register">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerButtonTapped" destination="hep-DG-abI" eventType="touchUpInside" id="d0k-RA-54X"/>
-                                    <segue destination="zbA-hh-QC7" kind="modal" id="0ra-94-SKk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Jo-FYU">
                                 <rect key="frame" x="277" y="318" width="43" height="30"/>
                                 <constraints>
@@ -59,6 +45,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInButtonTapped" destination="hep-DG-abI" eventType="touchUpInside" id="Svn-fL-UQo"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="login" id="DML-kw-jFR"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OzUinLoveLogo" translatesAutoresizingMaskIntoConstraints="NO" id="A3L-dC-MZf">
@@ -68,6 +55,20 @@
                                     <constraint firstAttribute="width" constant="415" id="aaG-Hu-x6B"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38y-gL-3PM">
+                                <rect key="frame" x="270" y="382" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="Tka-aH-avQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="n8V-td-bsm"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonTapped" destination="hep-DG-abI" eventType="touchUpInside" id="d0k-RA-54X"/>
+                                    <segue destination="zbA-hh-QC7" kind="show" identifier="register" id="0ra-94-SKk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -83,7 +84,7 @@
                             <constraint firstAttribute="centerY" secondItem="uao-RP-LnY" secondAttribute="centerY" constant="22" id="sFi-V7-t8V"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome!" id="oJR-Rp-Zq4"/>
+                    <navigationItem key="navigationItem" id="oJR-Rp-Zq4"/>
                     <connections>
                         <outlet property="logIn" destination="rf6-Jo-FYU" id="VLj-sy-CO3"/>
                         <outlet property="nameField" destination="Tyb-Y0-YWc" id="I89-T8-pgX"/>
@@ -157,21 +158,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwW-tB-3T3">
-                                <rect key="frame" x="276" y="447" width="48" height="30"/>
-                                <color key="backgroundColor" red="0.47601587820000002" green="0.59351310209999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="P8e-mR-2Iw"/>
-                                    <constraint firstAttribute="height" constant="30" id="ZRe-W5-JFY"/>
-                                </constraints>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelTapped:" destination="zbA-hh-QC7" eventType="touchUpInside" id="R2q-oM-sNl"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter first name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOf-S5-nkk">
                                 <rect key="frame" x="180" y="72" width="241" height="30"/>
                                 <constraints>
@@ -199,6 +185,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yS-2o-Kpa">
+                                <rect key="frame" x="282" y="513" width="37" height="30"/>
+                                <color key="backgroundColor" red="0.47601587820000002" green="0.59351310209999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="caS-ia-S9z"/>
+                                    <constraint firstAttribute="width" constant="37" id="hY6-vo-rdm"/>
+                                </constraints>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deneme" destination="zbA-hh-QC7" eventType="touchUpInside" id="uhH-vk-GmS"/>
+                                    <segue destination="hep-DG-abI" kind="show" id="8HJ-dr-ZOc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwW-tB-3T3">
+                                <rect key="frame" x="276" y="447" width="48" height="30"/>
+                                <color key="backgroundColor" red="0.47601587820000002" green="0.59351310209999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="P8e-mR-2Iw"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZRe-W5-JFY"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="zbA-hh-QC7" eventType="touchUpInside" id="R2q-oM-sNl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -216,6 +233,7 @@
                             <constraint firstAttribute="centerY" secondItem="jjN-qh-6Ha" secondAttribute="centerY" constant="-42" id="Z7i-0y-c3J"/>
                             <constraint firstAttribute="centerX" secondItem="jjN-qh-6Ha" secondAttribute="centerX" constant="-0.5" id="c03-wy-TU9"/>
                             <constraint firstAttribute="centerX" secondItem="jiH-3r-Iyo" secondAttribute="centerX" constant="-0.5" id="cSv-xF-SGK"/>
+                            <constraint firstAttribute="centerX" secondItem="9yS-2o-Kpa" secondAttribute="centerX" constant="-0.5" id="cu0-f8-7Mk"/>
                             <constraint firstAttribute="centerY" secondItem="eTo-UU-iVJ" secondAttribute="centerY" constant="263.5" id="jvt-7i-Hbu"/>
                             <constraint firstAttribute="centerX" secondItem="QOf-S5-nkk" secondAttribute="centerX" constant="-0.5" id="kVQ-X6-ef9"/>
                             <constraint firstAttribute="centerX" secondItem="jiH-3r-Iyo" secondAttribute="centerX" constant="-6.5" id="ohN-f0-7Bh"/>
@@ -225,6 +243,7 @@
                             <constraint firstAttribute="centerY" secondItem="nXz-Z6-UXM" secondAttribute="centerY" constant="94" id="tDJ-ea-zPC"/>
                             <constraint firstAttribute="centerY" secondItem="QOf-S5-nkk" secondAttribute="centerY" constant="213" id="vbR-xf-cSz"/>
                             <constraint firstAttribute="centerX" secondItem="uwW-tB-3T3" secondAttribute="centerX" constant="-6" id="xIr-cP-pXB"/>
+                            <constraint firstAttribute="centerY" secondItem="9yS-2o-Kpa" secondAttribute="centerY" constant="-228" id="yON-Ot-DyQ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -283,6 +302,9 @@
                                 <state key="normal" title="Info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wv2-fz-jxP" kind="show" id="Fue-Yq-DV1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3w-ux-v9r">
                                 <rect key="frame" x="147" y="378" width="37" height="30"/>
@@ -311,9 +333,12 @@
                                     <constraint firstAttribute="width" constant="307" id="wxC-hy-LCC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUS-Hk-6zn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUS-Hk-6zn">
                                 <rect key="frame" x="214" y="436" width="172" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="0lJ-AE-slY"/>
+                                    <constraint firstAttribute="height" constant="30" id="jNo-0j-3ad"/>
+                                </constraints>
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -329,6 +354,7 @@
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="RUS-Hk-6zn" secondAttribute="centerY" constant="-151" id="7ez-DM-8gF"/>
                             <constraint firstAttribute="centerY" secondItem="YjW-cw-WWa" secondAttribute="centerY" constant="-93" id="I4H-Ik-FHM"/>
                             <constraint firstAttribute="centerX" secondItem="jgM-Ib-GyR" secondAttribute="centerX" constant="-0.5" id="ORw-ZE-PGF"/>
                             <constraint firstAttribute="centerY" secondItem="jgM-Ib-GyR" secondAttribute="centerY" constant="100" id="PZE-Qd-0db"/>
@@ -337,6 +363,7 @@
                             <constraint firstAttribute="centerX" secondItem="YjW-cw-WWa" secondAttribute="centerX" id="ebq-hx-Fqs"/>
                             <constraint firstAttribute="centerY" secondItem="z3w-ux-v9r" secondAttribute="centerY" constant="-93" id="nEJ-C3-Pvv"/>
                             <constraint firstAttribute="centerX" secondItem="LDg-ZW-o15" secondAttribute="centerX" constant="-139" id="oyT-xw-xK7"/>
+                            <constraint firstAttribute="centerX" secondItem="RUS-Hk-6zn" secondAttribute="centerX" id="qKt-9a-Kch"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -348,7 +375,6 @@
                     <connections>
                         <outlet property="imageView" destination="jgM-Ib-GyR" id="gYF-XY-dCa"/>
                         <outlet property="usernameLabel" destination="7wf-Bc-ijA" id="OUP-Xq-xW5"/>
-                        <segue destination="hep-DG-abI" kind="modal" identifier="login" id="kAy-eJ-Xu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -358,20 +384,20 @@
         <!--Navigation Controller-->
         <scene sceneID="Pet-Uf-T4z">
             <objects>
-                <navigationController storyboardIdentifier="Navigation" id="pj2-7Q-QCC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Navigation" hidesBarsWhenKeyboardAppears="YES" id="pj2-7Q-QCC" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oeW-Cb-rgt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="aNk-H0-chD"/>
+                        <segue destination="hep-DG-abI" kind="relationship" relationship="rootViewController" id="rNO-8m-amA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abM-eD-mlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-928" y="-1541"/>
+            <point key="canvasLocation" x="-928" y="-1555"/>
         </scene>
-        <!--Info View Controller-->
+        <!--Title-->
         <scene sceneID="1ic-wU-0AI">
             <objects>
                 <viewController storyboardIdentifier="info" id="wv2-fz-jxP" customClass="infoViewController" customModule="OzUinLove" customModuleProvider="target" sceneMemberID="viewController">
@@ -456,6 +482,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="ThT-Uz-RnB"/>
                     <connections>
                         <outlet property="ageLabel" destination="svX-F5-hfy" id="Vzv-Kn-yrS"/>
                         <outlet property="imageView" destination="1Nd-BW-A5S" id="I8a-Jq-KXc"/>
@@ -470,4 +497,7 @@
     <resources>
         <image name="OzUinLoveLogo" width="590" height="251"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rNO-8m-amA"/>
+    </inferredMetricsTieBreakers>
 </document>
