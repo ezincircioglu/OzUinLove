@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F04CF2301A635D5C00FB8AED /* messageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04CF22F1A635D5C00FB8AED /* messageViewController.swift */; };
 		F050BA491A39039E0035B419 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050BA481A39039E0035B419 /* infoViewController.swift */; };
 		F050BA5C1A39090E0035B419 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050BA5B1A39090E0035B419 /* Member.swift */; };
 		F050BA5E1A3909C10035B419 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050BA5D1A3909C10035B419 /* Account.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F04CF22F1A635D5C00FB8AED /* messageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageViewController.swift; sourceTree = "<group>"; };
 		F050BA481A39039E0035B419 /* infoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		F050BA5B1A39090E0035B419 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F050BA5D1A3909C10035B419 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E29BDA1A38AE0500FF5BF6 /* ViewController.swift */,
+				F04CF22F1A635D5C00FB8AED /* messageViewController.swift */,
 				F050BA481A39039E0035B419 /* infoViewController.swift */,
 				F0D697BB1A3B767C009FCA74 /* loginViewController.swift */,
 				F0D697BD1A3B7690009FCA74 /* registerViewController.swift */,
@@ -243,6 +246,7 @@
 				F050BA601A390ACB0035B419 /* TrainingSet.swift in Sources */,
 				F050BA5E1A3909C10035B419 /* Account.swift in Sources */,
 				F0D697BE1A3B7690009FCA74 /* registerViewController.swift in Sources */,
+				F04CF2301A635D5C00FB8AED /* messageViewController.swift in Sources */,
 				F050BA491A39039E0035B419 /* infoViewController.swift in Sources */,
 				F0E29BDB1A38AE0500FF5BF6 /* ViewController.swift in Sources */,
 				F0E29BD91A38AE0500FF5BF6 /* AppDelegate.swift in Sources */,

@@ -368,6 +368,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="CyD-bS-YOi"/>
+                                <exclude reference="RUS-Hk-6zn"/>
                             </mask>
                         </variation>
                     </view>
@@ -375,6 +376,7 @@
                     <connections>
                         <outlet property="imageView" destination="jgM-Ib-GyR" id="gYF-XY-dCa"/>
                         <outlet property="usernameLabel" destination="7wf-Bc-ijA" id="OUP-Xq-xW5"/>
+                        <segue destination="ZV0-LI-mvj" kind="show" identifier="message" id="ksG-kQ-O3e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -397,7 +399,7 @@
             </objects>
             <point key="canvasLocation" x="-928" y="-1555"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="1ic-wU-0AI">
             <objects>
                 <viewController storyboardIdentifier="info" id="wv2-fz-jxP" customClass="infoViewController" customModule="OzUinLove" customModuleProvider="target" sceneMemberID="viewController">
@@ -482,7 +484,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="ThT-Uz-RnB"/>
                     <connections>
                         <outlet property="ageLabel" destination="svX-F5-hfy" id="Vzv-Kn-yrS"/>
                         <outlet property="imageView" destination="1Nd-BW-A5S" id="I8a-Jq-KXc"/>
@@ -490,8 +491,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Y3-KI-MkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="ThT-Uz-RnB"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="-802"/>
+            <point key="canvasLocation" x="-170" y="-794"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="B6f-Dx-ER6">
+            <objects>
+                <viewController title="Message" id="ZV0-LI-mvj" customClass="messageViewController" customModule="OzUinLove" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V94-0b-vPw"/>
+                        <viewControllerLayoutGuide type="bottom" id="LiW-2b-6fG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wZ3-RV-v7L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Naf-zm-HKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="-94"/>
         </scene>
     </scenes>
     <resources>

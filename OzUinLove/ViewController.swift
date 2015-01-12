@@ -21,12 +21,16 @@ class ViewController: UIViewController {
     }
     
     var acc = Account()
-    var index: Int = 0
-    
+    var index: Int = 1
+    var loginIndex: Int!
+    var likeArray = [Int]()
+    var likeDict = [String:[Int]]()
+
     @IBAction func Like() {
         memberArrayIndex(acc.members)
         refreshUI()
-        
+        likeArray.append(index)
+        likeDict[acc.members[loginIndex].userName] = likeArray
     }
 
     @IBAction func Nope() {
@@ -40,7 +44,7 @@ class ViewController: UIViewController {
         index++
         
         if(index > members.count-1) {
-            index = 0
+            index = 1
         }
         
         return index
@@ -57,11 +61,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
             if(!acc.members.isEmpty) {
-                let url = acc.members[index].photoURL
-                if let nsurl = NSURL(string: url) {
-                    if let nsdata = NSData(contentsOfURL: nsurl) {
-                        imageView.image = UIImage(data: nsdata)
+                NSLog("index %d",loginIndex)
+                if((loginIndex + 1) < acc.members.count) {
+                    let url = acc.members[loginIndex + 1].photoURL
+                    if let nsurl = NSURL(string: url) {
+                        if let nsdata = NSData(contentsOfURL: nsurl) {
+                            imageView.image = UIImage(data: nsdata)
                 
+                        }
                     }
                 }
             }

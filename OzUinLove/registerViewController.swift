@@ -71,6 +71,12 @@ class registerViewController: UIViewController {
             alertView.addButtonWithTitle("OK")
             alertView.show()
             
+            userNameField.clearsOnBeginEditing = true
+            passwordField.clearsOnBeginEditing = true
+            lastNameField.clearsOnBeginEditing = true
+            urlField.clearsOnBeginEditing = true
+            firstNameField.clearsOnBeginEditing = true
+            ageField.clearsOnBeginEditing = true
             
             //self.performSegueWithIdentifier("login", sender: self)
             //self.dismissViewControllerAnimated(true, completion: nil)

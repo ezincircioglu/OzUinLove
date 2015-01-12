@@ -15,7 +15,7 @@ class loginViewController: UIViewController {
     var member: Member!
     var check = false
     var members: [Member] = []
-    
+    var loginIndex: Int = 0
     @IBOutlet weak var logIn: UIButton!
     
     @IBOutlet weak var nameField: UITextField!
@@ -32,6 +32,7 @@ class loginViewController: UIViewController {
             if(temp == members[i].userName) {
                 if(tempPas == members[i].password) {
                     check = true
+                    loginIndex = i
                     NSLog("okeydir")
                 }
             }
@@ -82,9 +83,10 @@ class loginViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       
         if (segue.identifier == "login") {
-        let membersVC = segue.destinationViewController as ViewController
-        
-   
+            let memberIndexVC = segue.destinationViewController as ViewController
+            let membersVC = segue.destinationViewController as ViewController
+            
+            memberIndexVC.loginIndex = loginIndex
             membersVC.acc.members = members
         } else {
         let test = segue.destinationViewController as registerViewController
